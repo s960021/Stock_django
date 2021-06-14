@@ -1,0 +1,157 @@
+ ::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;  
+    background: transparent;  
+} 
+html {
+    scroll-behavior: smooth;
+  }
+/*標頭*/
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: -10px;
+    margin-top: -20px;
+    z-index: 5;
+    background-color: rgb(32, 35, 36);
+    box-shadow: 3px 3px 5px  #141414;
+
+  }
+  header nav {
+    flex: 2 1 400px;
+  }
+  
+  header nav ul {
+
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+        
+  }
+  
+  header nav ul li a {
+    color: #d8d4cf;
+    text-decoration: none;
+    font-size: 1.35rem;
+    transition: 0.25s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: rgb(155, 184, 238);
+    transition: 0.25s ease;
+  }
+.title{
+    position:absolute;
+    top:-15px;
+    left: 5%;
+    color:#d8d4cf ;
+}
+
+.stock_search{
+    position:relative;
+}
+/*改變文字輸入框字體顏色*/
+input::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+    color: #d8d4cf;   
+}  
+.search_box{
+    margin-top: 10px;
+    border-style:none ;
+    width: 150px;
+	height: 30px;
+	outline: 0;
+	border-bottom: 1px solid #d8d4cf;
+	font-size: 15px;
+	padding-left: 28px;
+    color:#d8d4cf;
+    background-color: rgb(32, 35, 36);
+
+
+}
+.search{
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    border-width: 1px #d8d4cf;
+    color:#d8d4cf;
+    background-color: rgb(55, 60, 61);
+}
+.stock_main {
+    margin-top: 50px;
+    display: flex;
+    height: 400px;
+    width: 80%;
+    left: 10%;
+    position:relative;
+    border-width: 20px;
+    padding: 15px;
+    border: 20px;
+    border-radius: 20px;
+    background-color: rgba(83, 130, 180, 0.85);
+    flex-direction: column ;
+    flex-wrap: wrap;
+    z-index: 2;
+
+  }
+.stock_data {
+    flex:1 0 20%;
+    color: #f0ebe5;
+    margin: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-left: 10%;
+    
+}
+.stock_data_1 {
+    flex:1 0 20%;
+
+    color: #f0ebe5;
+    margin: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.5rem;
+/*內*/
+    margin-left: 150px;/*外*/
+    
+}
+.back_1{
+    width: 1550px;
+    min-height: 100vh;
+    margin-left: -20px;
+    background-color: rgb(32, 35, 36);
+    position: absolute;
+    z-index: -1;
+}
+.back_2{
+    width: 1550px;
+    min-height: 100vh;
+    margin-left: -20px;
+    margin-top: 70px;
+    background-color: rgb(72, 79, 80);
+    position: absolute;
+    z-index: -1;
+}
+
+.stock_select{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 47%;
+    z-index: 1;
+   
+}
+.search_1{
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    border-width: 1px #d8d4cf;
+    color:#d8d4cf;
+    background-color: rgb(55, 60, 61);
+    z-index: 2;
+    
+}
+
