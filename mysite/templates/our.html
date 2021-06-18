@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <title>TW Stock</title>
+    <link rel="stylesheet" href="{% static 'twstyle.css' %}">
+</head>
+<body>
+   <header>
+        <h1 class="title">股票查詢系統</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">即時查詢</a></li>
+                <li><a href="{% url 'index' %}#two">查詢股票歷史</a></li>
+                <li><a href="">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- image part of the first page -->
+    <main>
+       <section class="one">
+        <div class="back_1"></div>
+            <div class="stock_search"  align="center">
+                <br>
+                <h3  style="padding:10px;color: #d8d4cf">組長:B0843017陳柏諭<h3>
+                <p style="color:#d8d4cf">資料庫創建/製作股票歷史走勢圖/影片錄製</p>
+                <br>
+                <h3 style="color:#d8d4cf">B0843030陳人傑<h3>
+                    <p style="color:#d8d4cf">網站美工/架設網站/簡易查詢即時股票系統</p>
+                <br>
+                <h3 style="color:#d8d4cf">B0843032黃敬中<h3>
+                    <p style="color:#d8d4cf">製作股票歷史走勢圖/簡易查詢即時股票系統/Debug</p>
+                <br>
+                <h3 style="color:#d8d4cf">B0843034林軒麒<h3>
+                    <p style="color:#d8d4cf">資料庫創建/ppt簡報</p>
+                <br>
+                <h3 style="color:#d8d4cf">B0843021王子源<h3>
+                    <p style="color:#d8d4cf">Word報告</p>
+                <br>
+                
+            </div>
+        </section>
+    </main>
+</footer>
+</body>
+</html>

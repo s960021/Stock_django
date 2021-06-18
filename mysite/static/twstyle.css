@@ -120,30 +120,14 @@ textarea::-webkit-input-placeholder {
     
 }
 .back_1{
-    width: 1550px;
-    min-height: 100vh;
+    width: calc(100% + 14px) ;
+    min-height: 220%;
     margin-left: -20px;
     background-color: rgb(32, 35, 36);
     position: absolute;
     z-index: -1;
 }
-.back_2{
-    width: 1550px;
-    min-height: 100vh;
-    margin-left: -20px;
-    margin-top: 70px;
-    background-color: rgb(72, 79, 80);
-    position: absolute;
-    z-index: -1;
-}
 
-.stock_select{
-    position: absolute;
-    margin-top: 10%;
-    margin-left: 47%;
-    z-index: 1;
-   
-}
 .search_1{
     border-radius: 10px;
     font-size: 15px;
@@ -151,7 +135,33 @@ textarea::-webkit-input-placeholder {
     border-width: 1px #d8d4cf;
     color:#d8d4cf;
     background-color: rgb(55, 60, 61);
+    position:relative;
     z-index: 2;
+}
+.stock_select{
+    text-align: center;
+    margin-top: 50px;
+}
+.stock_select select{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgba(83, 130, 180, 0.85);
+    color:#d8d4cf;
+    font-size: 15px;
+    border: 6px solid transparent;
+    border-radius: 3px;
     
 }
-
+.stock_select button{
+    margin-top: 20px;
+}
+.pic{
+    height: 90%;
+    width: 90%; 
+    position:absolute;
+    left: -3%;
+    margin-top: 8%;
+    margin-left: 7%;
+    text-align: center;
+    border-radius: 50px;
+}

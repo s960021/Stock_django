@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>TW Stock</title>
+        <link rel="stylesheet" href="{% static 'twstyle.css' %}">
+    </head>
+<body>
+    <header>
+        <h1 class="title">股票查詢系統</h1>
+        <nav>
+            <ul>
+                <li><a href="#">即時查詢</a></li>
+                <li><a href="#two">查詢股票歷史</a></li>
+                <li><a href="our/">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--即時查詢-->
+    <section class="one">
+        <div class="back_1"></div>
+
+        <div class="stock_search"  align="center">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <br><br>
+                <input type="search" name="Search" placeholder="請輸入股票代號" class="search_box"><br><br>
+                <button type="submit" class="search">及時查詢</button>
+            </form>
+        </div>
+        <div class="stock_main" >
+                <div class="stock_data">股票名稱:<br>{{stock.sname}}</div>
+                <div class="stock_data">股票全名:<br>{{stock.sfullname}}</div>
+                <div class="stock_data">股票代號:<br>{{stock.scode}}</div>
+                <div class="stock_data">查詢時間:<br>{{stock.stime}}</div>
+                <div class="stock_data_1">最佳買入價:<br>{% for i in stock.bib_price %} {{ i }} {% endfor %}</div>
+                <div class="stock_data_1">最佳買入數量:<br>{% for i in stock.bib_vol %} {{ i }} {% endfor %}</div>
+                <div class="stock_data_1">最佳賣出價:<br>{% for i in stock.ask_price %} {{ i }} {% endfor %}</div>
+                <div class="stock_data_1">最佳賣出數量:<br>   {% for i in stock.ask_vol %} {{ i }} {% endfor %}</div>
+        </div>
+        <br><br><br><br>
+    </section>
+    <section id="two">
+    <br><br>
+    <div class="back_2"></div>
+        
+    <div class="stock_select">
+        <form action="" method="POST">
+        <img src = "{%static 'pic/image.png' %}" class="pic" >
+            {% csrf_token %} 
+            <select name="value"> 
+                <option value="#">股票走勢圖</option>
+                <option value="1303">1303 南亞</option>
+                <option value="2303">2303 聯華</option>
+                <option value="2308">2308 台達</option>
+                <option value="2317">2317 鴻海</option>
+                <option value="2330">2330 台積電</option>
+                <option value="2412">2412 中華電信</option>
+                <option value="2454">2454 聯發科</option>
+                <option value="2881">2881 富邦</option>
+                <option value="2882">2882 國泰</option>
+                <option value="6505">6505 台塑</option>
+            </select>
+            <select name="year"> 
+                <option value="#">年份</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>                
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+            <select name="month"> 
+            <option value="#">月份</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <br>
+            <button type="submit" class="search_1">查詢</button>
+        </form> 
+        </select>
+    </div> 
+    </section>
+</body>    
+</html>
